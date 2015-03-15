@@ -31,7 +31,7 @@ public class DemoEJBTest {
 	public void sum_two_number_demoejb() {
 		Integer result = demoEjb.sumInt();
 		Integer expected = 5;
-		assertTrue(result.equals(expected));
+		assertEquals(result, expected);
 	}
 
 }
