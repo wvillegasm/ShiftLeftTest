@@ -1,6 +1,5 @@
 package com.itsoft.slt.ejb.testremote;
 
-import java.util.Iterator;
 import java.util.List;
 
 import javax.naming.Context;
@@ -8,7 +7,7 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
 import com.itsoft.slt.ejb.domain.User;
-import com.itsoft.slt.ejb.service.impl.UserServiceRemoteImpl;
+import com.itsoft.slt.ejb.service.IServiceRemote;
 
 /**
  * 
@@ -27,7 +26,7 @@ public class UserServiceTest {
 		try {
 			
 			Context ctx = new InitialContext();
-			UserServiceRemoteImpl serviceRemoteImpl = (UserServiceRemoteImpl) ctx.lookup("java:global/ShiftLeftTest/UserServiceRemote!com.itsoft.slt.ejb.service.UserServiceRemote");
+			IServiceRemote<User> serviceRemoteImpl = (IServiceRemote<User>) ctx.lookup("java:global/ShiftLeftTest/UserServiceImpl!com.itsoft.slt.ejb.service.IServiceRemote");
 			List<User> users = serviceRemoteImpl.findAll();
 			
 			for (User user : users) {

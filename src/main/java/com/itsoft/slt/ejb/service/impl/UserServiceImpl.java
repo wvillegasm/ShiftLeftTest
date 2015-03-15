@@ -6,10 +6,12 @@ import java.util.List;
 import javax.ejb.Stateless;
 
 import com.itsoft.slt.ejb.domain.User;
-import com.itsoft.slt.ejb.service.UserServiceRemote;
+import com.itsoft.slt.ejb.service.IServiceLocal;
+import com.itsoft.slt.ejb.service.IServiceRemote;
 
 @Stateless
-public class UserServiceRemoteImpl implements UserServiceRemote<User> {
+public class UserServiceImpl implements IServiceRemote<User>,
+		IServiceLocal<User> {
 
 	@Override
 	public List<User> findAll() {
@@ -28,19 +30,19 @@ public class UserServiceRemoteImpl implements UserServiceRemote<User> {
 	}
 
 	@Override
-	public void insert(User u) {
+	public void insert(User t) {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public void update(User u) {
+	public void update(User t) {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public void delete(User u) {
+	public void delete(User t) {
 		// TODO Auto-generated method stub
 
 	}

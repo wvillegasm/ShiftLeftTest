@@ -2,18 +2,19 @@ package com.itsoft.slt.ejb.service;
 
 import java.util.List;
 
-import javax.ejb.Remote;
+import javax.ejb.Local;
 
-@Remote
-public interface UserServiceRemote<T> {
-	
+@Local
+public interface IServiceLocal<T> {
+
 	List<T> findAll();
 	
 	T findById();
-	
+
 	void insert(T t);
-	
+
 	void update(T t);
-	
+
 	void delete(T t);
+
 }
