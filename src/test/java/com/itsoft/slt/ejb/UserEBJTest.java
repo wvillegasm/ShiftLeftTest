@@ -13,6 +13,12 @@ import org.junit.Test;
 import com.itsoft.slt.ejb.domain.User;
 import com.itsoft.slt.ejb.service.IServiceLocal;
 
+/**
+ * 
+ * @author wilfredo
+ *
+ * Running with embedded WAS
+ */
 public class UserEBJTest {
 
 	EJBContainer container;

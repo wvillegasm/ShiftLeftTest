@@ -9,7 +9,7 @@ public interface IServiceLocal<T> {
 
 	List<T> findAll();
 	
-	T findById();
+	T findById(T t);
 
 	void insert(T t);
 
