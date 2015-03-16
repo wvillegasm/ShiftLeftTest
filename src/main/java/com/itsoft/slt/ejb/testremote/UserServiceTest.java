@@ -22,7 +22,7 @@ public class UserServiceTest {
 		
 		System.out.println("");
 		
-		//Using Simplified API of glassfish
+		//Using Simplified API of glass fish
 		try {
 			
 			Context ctx = new InitialContext();

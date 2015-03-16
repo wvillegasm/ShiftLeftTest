@@ -1,12 +1,12 @@
 package com.itsoft.slt.ejb;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
 import javax.ejb.embeddable.EJBContainer;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -21,7 +21,7 @@ public class UserEBJTest {
 	@Before
 	public void init() throws Exception {
 		container = EJBContainerSinglenton.getInstance(); // EJBContainer.createEJBContainer();
-		userService = (IServiceLocal) container
+		userService = (IServiceLocal<User>) container
 				.getContext()
 				.lookup("java:global/classes/UserServiceImpl!com.itsoft.slt.ejb.service.IServiceLocal");
 
